@@ -8,11 +8,11 @@ using namespace std;
 
 int calc(int n,vii input){
 
-  bool visited[n];
-  memset(visited,false,n);
+  bool visited[n+1];
+  memset(visited,false,n+1);
 
-  int distance[input.size()+1];
-  for(int i = 0;i<=input.size()+1;i++)
+  int distance[n+1];
+  for(int i = 0;i<=n;i++)
     distance[i] = 0;
     
   stack< pair< lld,lld > > dfs;
@@ -35,9 +35,11 @@ int calc(int n,vii input){
   
   }
   int total = 0;
-  for(int i =0;i<=input.size();i++)
+  for(int i =0;i<=n;i++){
+//    cout<<i<<" "<<distance[i]<<endl;
     if(distance[i]%2 != 0)
-      total+=1;
+      total++;
+  }
   return total;
 }
 

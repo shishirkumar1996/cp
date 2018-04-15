@@ -39,7 +39,7 @@ void calc(int n,vector<int > input){
         if(input[i]==minm && maximize_counter > 0)
           temp = input[i]+1,maximize_counter--;
         else if(input[i]==maxm && minimize_counter > 0)
-          temp = input[i]-1,minimize_counter++;
+          temp = input[i]-1,minimize_counter--;
         
         result.push_back(temp);
         if(input[i] == result[i])
