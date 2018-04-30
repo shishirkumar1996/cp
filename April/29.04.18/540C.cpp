@@ -11,28 +11,26 @@ int col[4] = {0,1,0,-1};
 
 string calc(int n,int m,vcc input,int init_r,int init_c,int final_r,int final_c){
   
-  int visited[n+1][n+1];
+  int visited[n+1][m+1];
   for(int i = 1;i<=n;i++)
-    for(int j = 1;j<=m;j++)
-      visited[i][j] = (input[i][j]=='X')?1:0;
-    
+    for(int j = 1;j<=m;j++) visited[i][j] = (input[i][j]=='X')?1:0;
+
   stack< pr > dfs;
   dfs.push(make_pair(init_r,init_c));
-  
+  visited[init_r][init_c]--;
   while(dfs.size()){
     pr top = dfs.top();
     dfs.pop();
     int r = top.first;
     int c = top.second;
-    visited[r][c]++;
-//    cout<<r<<" "<<c<<endl;
-    for(int i = 0;i<4;i++)
-      if(r+row[i]>0 && r+row[i]<=n && c+col[i]>0 && c+col[i] <= m && visited[r+row[i]][c+col[i]] < 2){
-        dfs.push(make_pair(r+row[i],c+col[i]));
-        cout<<visited[r+row[i]][c+col[i]]<<endl;
-      } 
+    if(visited[r][c]<2)
+      visited[r][c]++;
+    if(visited[r][c] < 2)
+      for(int i = 0;i<4;i++)
+        if(r+row[i]>0 && r+row[i]<=n && c+col[i]>0 && c+col[i] <= m && visited[r+row[i]][c+col[i]] < 2){
+          dfs.push(make_pair(r+row[i],c+col[i]));
+        } 
   }
-  cout<<visited[final_r][final_c]<<endl;
   if(visited[final_r][final_c]==2)
     return "YES";
   else
