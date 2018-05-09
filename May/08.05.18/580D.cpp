@@ -9,36 +9,29 @@ using namespace std;
 lld rule[NUM][NUM];
 int n,m,k;
 vi sat;
+lld sol[20][1<<20];
 
-lld dp(int fill,vi taken,lld val,lld last){
 
-  if(fill == m)
-    return val;
-  lld maxm = val;
+lld dp(int fill,int last,lld mask){
+
+  if(fill == m) return 0;
   
-//  if(fill==3)
-//    cout<<val<<" "<<last<<" "<<fill<<endl;
-  
+  lld val = sol[last][mask];
+  if(val != -1) return val;  
+
   for(int i = 1;i<=n;i++){
-    int flag = 1;
-    for(int j = 0;j<taken.size();j++)if(taken[j] == i) flag = 0;
-      if(!flag)
-        continue;
-      vi new_taken = taken;
-      new_taken.push_back(i);
-
-      maxm = max(maxm,dp(fill+1,new_taken,val+sat[i]+rule[last][i],i));
-      
+      if(mask&(1<<i)) continue;
+      val = max(val,dp(fill+1,i,mask|(1<<i))+rule[last][i]+sat[i]);
   }
-  return maxm;
+  return sol[last][mask] = val;
 }
 
 int main(){
 
+  faster
   cin>>n>>m>>k;
-  
-  for(int i = 0;i<NUM;i++)
-    for(int j =0;j<NUM;j++) rule[i][j] =  0;
+  memset(sol,-1,sizeof(sol));
+  memset(rule,0,sizeof(rule));  
     
   sat.resize(n+1);
   for(int i = 1;i<=n;i++) cin>>sat[i];
@@ -50,6 +43,5 @@ int main(){
     rule[a][b] = c;
   }
   
-  vi process;
-  cout<<dp(0,process,0,0)<<endl;
+  cout<<dp(0,0,0)<<endl;
 }
