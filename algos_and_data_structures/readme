@@ -16,5 +16,13 @@ Algorithm                                                   Use
 8. modular multiplicative inverse ------> used in chinese remainder theorem
 9. chinese remainder theorem -----> two arrays are given num[1..n],rem[1..n] and every pair num[i] and rem[i] is coprime, we need to find minimum positive number such that x%num[i] = rem[i] for every pair.
 10. modular exponentiation -------> for faster calculation of x^y
-11. breadth first search -------> traversal technique( yet to be completed)
+11. breadth first search -------> traversal technique
+12. depth first search ------> traversal technique(both iterative and recursive)
+13. dijkstra algorithm -------> greedy algorithm to find minimum distance from one vertex to all other vertices
+14. prim algorithm --------> for finding minimum spanning tree of a graph( greedy algorithm)
+15. kruskal algorithm-------> for finding minimum spanning tree of a graph
+16. heavy-light decomposition algorithm ----> to divide the tree into various chains in order to minimize the query time. As there are atmost log N chains and solution for each chain can be answered in O(log n) time,therefore total time complexity becomes O((logn)^2)
 
+Data structure
+
+1. disjoint set union (DSU) ------> can be used for 1) cycle checks  (check kruskal for implementation)

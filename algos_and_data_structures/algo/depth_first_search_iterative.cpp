@@ -5,28 +5,27 @@
 
 using namespace std;
 
-int n;
 vii graph(NUM);
-bool visited[NUM];
+int n,m;
 
-
-void bfs(){
+void dfs(){
   
+  bool visited[n];
   for(int i=0;i<=n;i++) visited[i] = false;
-  queue< int > q;
-  visited[1] = true;
-  q.push(1);
   
-  while(q.size()){
-    int front = q.front();
-    cout<<front<<" ";
-    q.pop();
-    
-    for(int i=0;i<graph[front].size();i++){
-      int child = graph[front][i];
+  stack< int > st;
+  st.push(1);
+  visited[1] = true;
+  
+  while(st.size()){
+    int top = st.top();
+    cout<<top<<" ";
+    st.pop();
+    for(int i=0;i<graph[top].size();i++){
+      int child = graph[top][i];
       if(!visited[child]){
         visited[child] = true;
-        q.push(child);
+        st.push(child);
       }
     }
   }
@@ -35,8 +34,6 @@ void bfs(){
 
 int main(){
   
-  int m;
-  cout<<"Enter the number of vertices and edges"<<endl;
   cin>>n>>m;
   for(int i=0;i<m;i++){
     int a,b;
@@ -44,5 +41,5 @@ int main(){
     graph[a].push_back(b);
     graph[b].push_back(a);
   }
-  bfs();
+  dfs();
 }
