@@ -29,7 +29,7 @@ int main(){
     if(flag) break;
   }
 
-  if(output.size()==m){
+  if(output.size()==m && m>=n-1){
     cout<<"Possible"<<endl;
     for(int i=0;i<output.size();i++)
       cout<<output[i].first<<" "<<output[i].second<<endl;;

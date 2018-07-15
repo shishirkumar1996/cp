@@ -1,0 +1,20 @@
+This folder serves as a template for all the algos and data structures which I might forget in the future.
+
+Algorithms and their Uses
+
+
+Algorithm                                                   Use
+
+1. tarjan algorithm          ----->    for finding strongly connected component
+2. maximum bipartite matching ---->    for finding maximum matching in bipartite graph
+3. Edmond Karp(ford fulkerson) algorithm ------>    maximum flow from source to sink in a graph . Edmon karp is a fully applied algorithm of ford fulkerson method
+4. hopcroft-karp algorithm    ---->    for finding maximum matching in bipartite graph. It can also be done with ford fulkerson method by just connecting source with all the vertices in first set and connecting sink with all the vertices in second set
+
+5. coin change problem        ---->     dynamic programming problem to check number of ways to return certain amount(change) given infinite number of coins of some types
+6. lowest common ancestor(binary lifting method) ---->     in trees, we need to find the lowest common ancestor of two given nodes.
+7. Extended euclidean algorithm ------> Finds integer coefficient  x and y such that ax+by = gcd(a,b) ( a and b are given) . The extended Euclidean algorithm is particularly useful when a and b are coprime (or gcd is 1). Since x is the modular multiplicative inverse of “a modulo b”, and y is the modular multiplicative inverse of “b modulo a”. As ax modulo b = 1, therefore a and x are modular multiplicative inverse. ( need to learn it)
+8. modular multiplicative inverse ------> used in chinese remainder theorem
+9. chinese remainder theorem -----> two arrays are given num[1..n],rem[1..n] and every pair num[i] and rem[i] is coprime, we need to find minimum positive number such that x%num[i] = rem[i] for every pair.
+10. modular exponentiation -------> for faster calculation of x^y
+11. breadth first search -------> traversal technique( yet to be completed)
+
