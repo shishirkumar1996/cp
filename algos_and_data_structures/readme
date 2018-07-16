@@ -21,7 +21,9 @@ Algorithm                                                   Use
 13. dijkstra algorithm -------> greedy algorithm to find minimum distance from one vertex to all other vertices
 14. prim algorithm --------> for finding minimum spanning tree of a graph( greedy algorithm)
 15. kruskal algorithm-------> for finding minimum spanning tree of a graph
-16. heavy-light decomposition algorithm ----> to divide the tree into various chains in order to minimize the query time. As there are atmost log N chains and solution for each chain can be answered in O(log n) time,therefore total time complexity becomes O((logn)^2)
+16. heavy-light decomposition algorithm ----> to divide the tree into various chains in order to minimize the query time. As there are atmost log N chains and solution for each chain can be answered in O(log n) time,therefore total time complexity becomes O((logn)^2). Each continues on the vertex which have the greatest number of elements in its subtree
+17. merge sort        -------> sorting method with O(nlogn) complexity and works on divide and conquer approach
+
 
 Data structure
 
