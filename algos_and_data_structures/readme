@@ -18,12 +18,20 @@ Algorithm                                                   Use
 10. modular exponentiation -------> for faster calculation of x^y
 11. breadth first search -------> traversal technique
 12. depth first search ------> traversal technique(both iterative and recursive)
-13. dijkstra algorithm -------> greedy algorithm to find minimum distance from one vertex to all other vertices
+13. dijkstra algorithm -------> greedy algorithm to find minimum distance from one vertex to all other vertices. Time complexity is O(VlogV)
 14. prim algorithm --------> for finding minimum spanning tree of a graph( greedy algorithm)
 15. kruskal algorithm-------> for finding minimum spanning tree of a graph
 16. heavy-light decomposition algorithm ----> to divide the tree into various chains in order to minimize the query time. As there are atmost log N chains and solution for each chain can be answered in O(log n) time,therefore total time complexity becomes O((logn)^2). Each continues on the vertex which have the greatest number of elements in its subtree
 17. merge sort        -------> sorting method with O(nlogn) complexity and works on divide and conquer approach
-
+18. quick sort ----->it also works on divide and conquer approach. A pivot is being selected and the array is divided on the basis of this pivot and then sorted. complexity is O(nlogn)
+19. radix sort ------> complexity is O((base b)log(k)*(n+b)) where b is base for representing numbers, n is the number of elements and k is the maximum possible value.Can work in linear time.
+20. binary search ----> works on sorted list, to search for a particular element. divide and conquer approach. O(logn) time.
+21. z-algorithm ------> find all occurences of a pattern in a text in linear time. If length of text is m and length of pattern is m, then total time taken is O(m+n) with linear space complexity.Same time and space complexity as KMP algo but simpler to understand.works on z-array in which length of longest starting from str[i] is also a prefix of str[0..n-1].
+22. kmp algorithm -------> find all occurences of a pattern in a text in linear space complexity.
+23. fractional knapsack problem -----> greedy approach works for this problem as we can take fraction of an item.
+24. 0-1 knapsack problem ------> dynamic programming approach works for this problem as you can either take full item or not at all.
+25. rod cutting problem ----> dynamic programming approach.divide the rod into such parts so that the value of the parts become maximum
+26. bellman-ford algorithm ----> dynamic programming approach. Finds shortest paths from sources to all vertices in the given graph.The graph may contain negative weight edges.Time complexity is O(VE) where V is number of vertices, E is number of edges.(to be completed)
 
 Data structure
 
