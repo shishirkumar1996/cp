@@ -31,7 +31,13 @@ Algorithm                                                   Use
 23. fractional knapsack problem -----> greedy approach works for this problem as we can take fraction of an item.
 24. 0-1 knapsack problem ------> dynamic programming approach works for this problem as you can either take full item or not at all.
 25. rod cutting problem ----> dynamic programming approach.divide the rod into such parts so that the value of the parts become maximum
-26. bellman-ford algorithm ----> dynamic programming approach. Finds shortest paths from sources to all vertices in the given graph.The graph may contain negative weight edges.Time complexity is O(VE) where V is number of vertices, E is number of edges.(to be completed)
+26. bellman-ford algorithm ----> dynamic programming approach. Finds shortest paths from sources to all vertices in the given graph.The graph may contain negative weight edges.Time complexity is O(VE) where V is number of vertices, E is number of edges. In both bellman ford and prim algorithm, graph is represented as array of edges.
+27. floyd warshall algorithm ------> dynamic programming approach. calculates shortest path from each vertex to every other vertex
+28. longest increasing subsequence ------> dynamic programming approach has time complexity of O(n^2). But here a method of O(nlogn) is being described.
+In dynamic programming approach, we just check all the smaller indices for a given index.
+29. longest common subsequence -----> dynamic programming approach. Time complexity is O(mn) where m and n are sizes of two strings.
+30. rabin-karp algorithm -------> finds a pattern in a string just like z-algorithm and kmp algorithm. time complexity is O(m+n). Works by calculating hash values of the string.
+
 
 Data structure
 
