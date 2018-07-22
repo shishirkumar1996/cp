@@ -37,6 +37,10 @@ Algorithm                                                   Use
 In dynamic programming approach, we just check all the smaller indices for a given index.
 29. longest common subsequence -----> dynamic programming approach. Time complexity is O(mn) where m and n are sizes of two strings.
 30. rabin-karp algorithm -------> finds a pattern in a string just like z-algorithm and kmp algorithm. time complexity is O(m+n). Works by calculating hash values of the string.
+31. sudoku solving ------> use of backtrack to solve 3*3 sudoku
+32. n-queen problem -------> backtracking problem. number of ways to keep n queens on n*n chessboard so that none of them attack any other queen. here just one orientation is being shown. Complexity is exponential. Therefore pruning is also applied to increase efficiency.
+33. matrix exponentiation algorithm ------> here, matrix exponentiation is done to calculate f(n) = a*f(n-1)+b*f(n-2)+c*f(n-3) in O(logn) time. similarly fibonacii sequence and other sequence numbers can also be calculated in o(logn) time. the matrices changes as the sequences changes.
+34. closest pair of point ------> given n points in the plane,find closes pair of point among the given points. algorithm has divide and conquer approach. The time complexity is O(n(logn)^2).
 
 
 Data structure
