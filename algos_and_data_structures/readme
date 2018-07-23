@@ -27,7 +27,7 @@ Algorithm                                                   Use
 19. radix sort ------> complexity is O((base b)log(k)*(n+b)) where b is base for representing numbers, n is the number of elements and k is the maximum possible value.Can work in linear time.
 20. binary search ----> works on sorted list, to search for a particular element. divide and conquer approach. O(logn) time.
 21. z-algorithm ------> find all occurences of a pattern in a text in linear time. If length of text is m and length of pattern is m, then total time taken is O(m+n) with linear space complexity.Same time and space complexity as KMP algo but simpler to understand.works on z-array in which length of longest starting from str[i] is also a prefix of str[0..n-1].
-22. kmp algorithm -------> find all occurences of a pattern in a text in linear space complexity.
+22. kmp algorithm -------> find all occurences of a pattern in a text in linear space complexity. lps array is being created where lps[i] = the longest proper prefix of pat[0..i] which is also a suffix of pat[0..i]. Also prefix function used to calculate lps array can have other applications.
 23. fractional knapsack problem -----> greedy approach works for this problem as we can take fraction of an item.
 24. 0-1 knapsack problem ------> dynamic programming approach works for this problem as you can either take full item or not at all.
 25. rod cutting problem ----> dynamic programming approach.divide the rod into such parts so that the value of the parts become maximum
@@ -41,7 +41,11 @@ In dynamic programming approach, we just check all the smaller indices for a giv
 32. n-queen problem -------> backtracking problem. number of ways to keep n queens on n*n chessboard so that none of them attack any other queen. here just one orientation is being shown. Complexity is exponential. Therefore pruning is also applied to increase efficiency.
 33. matrix exponentiation algorithm ------> here, matrix exponentiation is done to calculate f(n) = a*f(n-1)+b*f(n-2)+c*f(n-3) in O(logn) time. similarly fibonacii sequence and other sequence numbers can also be calculated in o(logn) time. the matrices changes as the sequences changes.
 34. closest pair of point ------> given n points in the plane,find closes pair of point among the given points. algorithm has divide and conquer approach. The time complexity is O(n(logn)^2).
-
+35. orientation of three points -----> It can be either counterclockwise, clockwise or colinear. This property can be used to find intersection of line segments.
+36 topological sorting --------->  Topological sorting for Directed Acyclic Graph (DAG) is a linear ordering of vertices such that for every directed edge u to v, vertex u comes before v in the ordering. Topological Sorting for a graph is not possible if the graph is not a DAG. Useful in solving dynamic programming related problem. Time complexity is same as dfs of O(V+E).
+37.A vertex in an undirected connected graph is an articulation point (or cut vertex) iff removing it (and edges through it) disconnects the graph.For a disconnected undirected graph, an articulation point is a vertex removing which increases number of connected components.Here O(V+E) algorithm is given to find articulation points.
+38. graph coloring problem -----> The problem is, given m colors, find a way of coloring the vertices of a graph such that no two adjacent vertices are colored using same color. The other graph coloring problems like Edge Coloring (No vertex is incident to two edges of same color) and Face Coloring (Geographical Map Coloring) can be transformed into vertex coloring.Chromatic Number: The smallest number of colors needed to color a graph G is called its chromatic number. This problem is NP complete as no efficient algorithm is available. There is  a basic greedy algorithm which doesn't guarantee minimum colors but an upper bound on the number of colors. this never uses more than d+1 colors where d is the maximum degree of vertex in the given graph
+39. travelling salesman problem ------> Given a set of cities and distance between every pair of cities, the problem is to find the shortest possible route that visits every city exactly once and returns to the starting point.(yet to be done)
 
 Data structure
 
