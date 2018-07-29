@@ -16,7 +16,7 @@ int main(){
     if(takeoff[i] == 1) flag =0;
   }
   for(int i=0;i<n;i++){ cin>>land[i];
-    if(takeoff[i] == 1) flag = 0;
+    if(land[i] == 1) flag = 0;
   }
   if(!flag){cout<<-1<<endl;return 0;}
     
