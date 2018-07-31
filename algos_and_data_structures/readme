@@ -67,6 +67,9 @@ The given expressions are of the form (a1 or a2) and ( b1 or b2) and (c1 or c2) 
 57. manacher algorithm ---------> It is used to find longest substring which is palindrome in linear time.
 58. Kasai algorithm ----> It is used for construction of LCP(lowest common prefix) array from suffix array.LCP Array is an array of size n (like Suffix Array). A value lcp[i] indicates length of the longest common prefix of the suffixes inexed by suffix[i] and suffix[i+1]. suffix[n-1] is not defined as there is no suffix after it. The algo takes O(m*logn) time where m is the length of the pattern to be searched and n is the length of the text. Suffix array construction takes O(nlogn).
 59. Ukkonen algorithm -------> It is used to create implicit suffix tree. Suffix tree is a copmressed suffix trie, so all vertices which are not corresponding to suffixes and which have only one descendant are omitted.
+60. Dinic algorithm -----------> Time complexity is O(EV^2). It is the algorithm to find maximum flow from source to sink.
+61. sparse table ---------> Sparse table concept is used for fast queries on a set of static data (elements do not change). It does preprocessing so that the queries can answered efficiently. Here it is applied on range minimum query.
+62. number of transposition in a permutation ------> Cycle notation A permutation can be represented as a composition of permutation cycles. A permutation cycle is a set of elements in a permutation which trade places with one another.The number of transpositions in a permutation is important as it gives the minimum number of 2 element swaps required to get this particular arrangement from the identity arrangement: 1, 2, 3, … n. The parity of the number of such 2 cycles represents whether the permutation is even or odd.number of transpositions from a cycle = length of the cycle – 1.
 
 
 Data structure
