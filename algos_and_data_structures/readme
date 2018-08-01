@@ -61,7 +61,7 @@ The given expressions are of the form (a1 or a2) and ( b1 or b2) and (c1 or c2) 
 51. prufer code -------> It is a sequence which uniquely identifies a tree. we can convert prufer code to tree and vice versa.
 52. Distance between point and line segment -------> It can be useful in bigger problems.
 53. area of a polygon -------> can be useful in bigger problem
-54. mo's algorithm(query square root decomposition) -------> This is an offline algorithm which is used to give query based answers by sorting the queries.Let n be the size of the array and m be the size of the query. Preprocessing takes O(mlogm) time . Processing all queries take O((m+n)*sqrt(n)).
+54. mo's algorithm(query square root decomposition) -------> This is an offline algorithm which is used to give query based answers by sorting the queries.Let n be the size of the array and m be the size of the query. Preprocessing takes O(mlogm) time .Answering all queries take O((m+n)*sqrt(n)).
 55. kadane algorithm -------> It is used to find maximum contigous subsequence sum in O(n) time.
 56. Fast fourier transformation for polynomial multiplication ------> naive method takes O(n^2) time but through fft it takes O(nlogn) time. Here conversion from poynomial form to point value form is shown correctly.Some correction  is needed in inverse fft
 57. manacher algorithm ---------> It is used to find longest substring which is palindrome in linear time.
