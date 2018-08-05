@@ -1,10 +1,11 @@
 #include<bits/stdc++.h>
+#define lld long long int
+#define faster ios_base::sync_with_stdio(false);cin.tie(0);
 #define vi vector< int >
 #define vii vector< vi >
+#define MAXN 100007
 
 using namespace std;
-
-#define MAXN 1025
 
 vii tree(MAXN);
 vii centroid_tree(MAXN);
@@ -62,18 +63,44 @@ int decompose_tree(int root){
       int cend_subtree = decompose_tree(child);
       centroid_tree[cend_tree].push_back(cend_subtree);
       centroid_tree[cend_subtree].push_back(cend_tree);
-      cout<<cend_tree<<" "<<cend_subtree<<endl;
+//      cout<<cend_tree<<" "<<cend_subtree<<endl;
     }
   }
   return cend_tree;
 }
 
 int main(){
-  n = 16;
-  add_edge(0,3);add_edge(1,3);add_edge(2,3);add_edge(3,4);add_edge(4,5);
-  add_edge(5,6);add_edge(6,7);add_edge(6,8);add_edge(5,9);add_edge(9,10);
-  add_edge(10,11);add_edge(10,12);
-  add_edge(11,13);add_edge(12,14);add_edge(12,15);
-  
- decompose_tree(0); 
+ 
+ faster
+ cin>>n;
+ 
+ for(int i=1;i<n;i++){
+  int a,b;
+  cin>>a>>b;
+  add_edge(a,b);
+ }
+ int cent = decompose_tree(1);
+ 
+ for(int i=1;i<=n;i++)visited[i] = false;
+ 
+ char rank[n+1];
+ for(int i=1;i<=n;i++)rank[i] = '?';
+ stack< int > process;
+ process.push(cent);
+ rank[cent] = 'A';
+ visited[cent] =  true;
+ while(process.size()){
+  int v = process.top();
+  process.pop();
+  for(int i=0;i<centroid_tree[v].size();i++){
+    int child = centroid_tree[v][i];
+    if(visited[child])continue;
+    if(rank[v] == 'Z'){printf("Impossible!\n");return 0;}
+    rank[child] = rank[v]+1;
+    process.push(child);
+    visited[child] = true;
+  }
+ }
+ for(int i=1;i<=n;i++)printf("%c ",rank[i]);
+ printf("\n");
 }
