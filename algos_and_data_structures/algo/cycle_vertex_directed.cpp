@@ -11,6 +11,8 @@ vii graph(NUM);
 stack< int > st;
 vi disc(NUM),low(NUM);
 bool stacked[NUM];
+int cycle[NUM];
+
 
 void tarjan(int v){
   
@@ -25,15 +27,19 @@ void tarjan(int v){
     } else if(stacked[child] == true) low[v] = min(low[v],disc[child]);
   }
   if(low[v]  == disc[v]){
+    vi x;
     while(st.top() != v){
       // here is the elements in one scc
-      cout<<st.top()<<" ";
+      x.push_back(st.top());
       stacked[st.top()] = false;
       st.pop();
     }
-    cout<<st.top()<<endl;
+    x.push_back(st.top());
     stacked[st.top()] = false;
     st.pop();
+    if(x.size()!=1)
+    for(int i=0;i<x.size();i++)cycle[x[i]] = 1;
+    
   }
 }
 
@@ -55,5 +61,8 @@ void initialize(){
 int main(){
   cout<<"Enter the number of vertices and edges"<<endl;
   cin>>n>>m;
+  for(int i=0;i<n;i++)cycle[i] = 0;
   initialize();
+  for(int i=0;i<n;i++)cout<<cycle[i]<<" ";
+  cout<<endl;
 }
