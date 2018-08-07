@@ -1,0 +1,4 @@
+1. stoi(str) --------> converts given string to integer
+2. to_string(val) ---------> converts given integer to string
+3. string s(1,ch) --------> converts a particular character to string
+4. back() -------------> returns the last element of the vector. works even when the vector is empty.
