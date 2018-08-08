@@ -2,3 +2,6 @@
 2. to_string(val) ---------> converts given integer to string
 3. string s(1,ch) --------> converts a particular character to string
 4. back() -------------> returns the last element of the vector. works even when the vector is empty.
+4. __builtin_popcountll(n) -----------> returns the number of bits that are 1 in the given number
+5. freopen("input.txt","r",stdin)
+  freopen("output.txt","w",stdout) ----------> commands to give input and output via textfiles
