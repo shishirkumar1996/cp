@@ -76,6 +76,7 @@ The given expressions are of the form (a1 or a2) and ( b1 or b2) and (c1 or c2) 
 66. cycle vertices in undirected graph and directed graph-------> Sometimes necessity arise not to check whether there is a cycle or not but to check which vertices are in a cycle.Here it is assumed that the graph is a tree and not a forest. directed graph method is through scc method.
 67. kosaraju algorithm --------> it is used to check scc in a graph
 68. geometry primitives ---------> small geometry algos like dot product cross product which have bigger applications while calculting area of polygon or other complex operations.
+69. meet in the middle is a search technique which is used when the input is small but not as small that brute force can be used Like divide and conquer it splits the problem into two, solves them individually and then merge them. But we can't apply meet in the middle like divide and conquer because we don't have the same structure as the original problem.Here maximum sum subset problem is discussed where we have to find a subset having maximum sum less than or equal to S.
 
 
 Data structure

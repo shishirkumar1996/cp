@@ -11,7 +11,7 @@ int main(){
   cin>>n;
   
   vi output(n+1);
-  int x = pow(n,0.5);
+  int x = sqrt(n);
   int y = ceil(1.0*n/x);
   
   int index=n+1;

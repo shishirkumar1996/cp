@@ -1,3 +1,5 @@
 1. n-(n & -n) is used to give number after removing last significant bit.
 2. 1<<n . add n zero bits therefore multiplying the value by 2^n.
 3. -std=c++11 . used to compile with c++ 11
+4. generate(vec.begin(),vec.end(),gen) ------> generate numbers based on the gen function. does not have a return type, changes the given vector itself.
+gen() function have a return type but no functional parameters.

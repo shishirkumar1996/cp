@@ -1,5 +1,7 @@
 #include<bits/stdc++.h>
 #define lld long long int
+#define faster ios_base::sync_with_stdio(false);cin.tie(0);
+#define vi vector< lld >
 
 using namespace std;
 
@@ -7,12 +9,12 @@ struct node{
   int l,r;
   lld x,lazy;   //x carries the value
   node() {}
-  node(int _l,int _r) : l(_l),r(_r),x(0),lazy(0) {} // for minimum range query initialize x with INT_MAX
+  node(int _l,int _r) : l(_l),r(_r),x(INT_MAX),lazy(0) {}
   node(int _l,int _r, lld _x) : node(_l,_r) {x = _x;}
-  node(node a,node b) : node(a.l,b.r) { x=a.x+b.x;} // for minimum range query it will be x = min(a.x,b.x)
+  node(node a,node b) : node(a.l,b.r) { x=min(a.x,b.x);}
   void update(lld v) { x=v;}
   void range_update(lld v) { lazy = v; }
-  void apply() { x+= lazy *(r-l+1);lazy = 0;} //for minimum range query it will be x += lazy. used mainly in lazy propogation
+  void apply() { x+= lazy;lazy = 0;}
   void push(node &u) { u.lazy += lazy; } 
 };
 
@@ -55,20 +57,34 @@ struct segment_tree{
 
 int main(){
   
-  vector< lld > a;
-  int arr[] = {1,3,5,7,9,11};
-  for(int i=0;i<6;i++)a.push_back(arr[i]);
+  faster
+  int n;
+  cin>>n;
+  vi arr(n);
+  for(int i=0;i<n;i++)cin>>arr[i]; 
   
-  cout<<"provide the upper and lower bound inclusive"<<endl;
-  int x,y;
-  cin>>x>>y;
-  segment_tree s(a);
-  node z = s.query(x,y);
-  cout<<z.x<<endl;  
-  cout<<" updating 1 with 5"<<endl;
-  s.update(1,5);
-  cout<<s.query(x,y).x<<endl;    
-
+  segment_tree s(arr);
+  int m;
+  cin>>m;
+  string str;
+  getline(cin,str);
+  for(int i=0;i<m;i++){
+    getline(cin,str);
+    stringstream st(str);
+    int a = INT_MAX,b= INT_MAX,c = INT_MAX;
+    st>>a>>b>>c;
+    if(c==INT_MAX){
+      if(b<a){
+        int l1 = 0,r1 = b;
+        int l2 = a,r2 = n-1;
+//        cout<<l1<<" "<<r1<<" "<<s.query(l1,r1).x<<endl;
+        cout<<min(s.query(l1,r1).x,s.query(l2,r2).x)<<endl;
+      } else cout<<s.query(a,b).x<<endl;
+    } else {
+      if(b<a){
+        s.range_update(0,b,c);
+        s.range_update(a,n-1,c);
+      } else s.range_update(a,b,c);
+    }
+  }
 }
-
-

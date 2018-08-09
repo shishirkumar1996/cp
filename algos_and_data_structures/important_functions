@@ -5,3 +5,5 @@
 4. __builtin_popcountll(n) -----------> returns the number of bits that are 1 in the given number
 5. freopen("input.txt","r",stdin)
   freopen("output.txt","w",stdout) ----------> commands to give input and output via textfiles
+6. getline(cin,str) ------------> used to read the whole line as string in str  
+7. stringstream s(str) ----------> various applications. can be used as a tokenizer.

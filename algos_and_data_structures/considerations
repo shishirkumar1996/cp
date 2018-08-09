@@ -1,0 +1,1 @@
+1. sqrt(n) seems to give accurate result rather than pow(n,0.5).
