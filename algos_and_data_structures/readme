@@ -82,6 +82,8 @@ The given expressions are of the form (a1 or a2) and ( b1 or b2) and (c1 or c2) 
 71. modular division ----------> Given three positive numbers a, b and m. Compute a/b under modulo m. The task is basically to find a number c such that (b * c) % m = a % m. modular division is only defined when modular inverse of the divisor exist. inverse a number ‘a’ exists under modulo ‘m’ if ‘a’ and ‘m’ are co-prime, i.e., GCD of them is 1. Therefore if combined with fermat little theorem it can give easy solution for the inverse. Then (a/b)mod p will be equivalent to (a*pow(b,p-2))mod p.
 72. tree traversal ----------> The in and out time of the vertices are stored and all the vertices belong to the subtree of a specific vertex which have in time between the in and out time of the given vertex.
 73. prime factors of large number -----------> prime factors of all small numbers can be calculate through seive but prime factor of a large number can't be calculated through sieve. Therefore another greedy method is applied.
+74. product of divisors(factors) of a numbers ------> this has got applications in other problems. Here product of first 10^5 number is being calculated.
+75. sum of divisors(factors) of numbers --------> This has got applications in other problems. Here sum of first 10^5 number is being calculated.
 
 
 Data structure
