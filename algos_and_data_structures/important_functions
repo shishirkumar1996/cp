@@ -8,3 +8,4 @@
 6. getline(cin,str) ------------> used to read the whole line as string in str  
 7. stringstream s(str) ----------> various applications. can be used as a tokenizer.
 8. asin(val) -----------> returns the arc sine of the particular value given
+9. f.swap(g) -----------> swaps the values of the map, vector, set etc.

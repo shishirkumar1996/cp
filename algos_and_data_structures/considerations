@@ -1,3 +1,4 @@
 1. sqrt(n) seems to give accurate result rather than pow(n,0.5).
 2. way to read and write to input file is 
   ./a.out < input.txt > output.txt
+3. map can be passed by reference.
