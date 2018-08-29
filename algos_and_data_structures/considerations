@@ -2,3 +2,4 @@
 2. way to read and write to input file is 
   ./a.out < input.txt > output.txt
 3. map can be passed by reference.
+4. std::endl flushes the internal buffer of c++ runtime  to the operating system on every single line. Therefore we can change endl with '\n" to avoid tle
