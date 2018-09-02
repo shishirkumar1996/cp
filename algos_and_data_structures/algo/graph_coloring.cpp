@@ -8,9 +8,7 @@ using namespace std;
 vii graph(NUM);
 int n;
 
-void add(int x,int y){
-  graph[x].push_back(y);graph[y].push_back(x);
-}
+void add(int x,int y){ graph[x].push_back(y);graph[y].push_back(x); }
 
 void greedyColoring(){
 

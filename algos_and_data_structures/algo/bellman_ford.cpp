@@ -18,7 +18,7 @@ void bellmanford(int src){
   for(int i=0;i<n;i++) dist[i] = INT_MAX;
   dist[src] = 0;
   
-  for(int i=1;i<=n-1;i++){
+  for(int i=1;i<=n-1;i++)
     for(int j=0;j<m;j++){
       int u = graph[j].first.first;   // source
       int v = graph[j].first.second;  // destination
@@ -26,7 +26,6 @@ void bellmanford(int src){
       if(dist[u] != INT_MAX && dist[u]+weight < dist[v])
         dist[v] = dist[u]+weight;
     }
-  }
   
   for(int i=0;i<m;i++){
     int u= graph[i].first.first; //source

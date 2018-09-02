@@ -13,9 +13,7 @@ vi subtree_size(MAXN);
 int n;  // number of vertices of the graph
 int num; // number of nodes visited till now
 
-void add_edge(int u,int v){
-  tree[u].push_back(v);tree[v].push_back(u);
-}
+void add_edge(int u,int v){ tree[u].push_back(v);tree[v].push_back(u); }
 
 void dfs(int src){
   visited[src] = true;

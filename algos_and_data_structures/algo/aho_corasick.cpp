@@ -17,7 +17,6 @@ int build_matching_machine(){
   memset(out,0,sizeof(out));
   memset(g,-1,sizeof(g));
   
-  
   int states = 1;
   for(int i=0;i<k;++i){
     string word = arr[i];

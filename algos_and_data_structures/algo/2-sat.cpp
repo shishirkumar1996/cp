@@ -31,13 +31,9 @@ void dfs_second(int u){ //kosaraj second dfs
 void is2sat(int n,int m,int a[],int b[]){
   for(int i=0;i<m;i++){
     if(a[i]>0 && b[i]>0){add_edges(a[i]+n,b[i]);add_edges(b[i]+n,a[i]);}
-    else if(a[i]>0 && b[i]<0){
-      add_edges(a[i]+n,n-b[i]);
-      add_edges(-b[i],a[i]);
-    } else if(a[i]<0 && b[i]>0){
-      add_edges(-a[i],b[i]);
-      add_edges(b[i]+n,n-a[i]);
-    } else{ add_edges(-a[i],n-b[i]);add_edges(-b[i],n-a[i]);}
+    else if(a[i]>0 && b[i]<0){add_edges(a[i]+n,n-b[i]);add_edges(-b[i],a[i]);}
+    else if(a[i]<0 && b[i]>0){add_edges(-a[i],b[i]);add_edges(b[i]+n,n-a[i]);}
+    else {add_edges(-a[i],n-b[i]);add_edges(-b[i],n-a[i]);}
   }
   for(int i=1;i<=2*n;i++)if(!visited[i])dfs_first(i);
   while(s.size()){

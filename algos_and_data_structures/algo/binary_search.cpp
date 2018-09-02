@@ -6,7 +6,6 @@ using namespace std;
 int n;
 
 int binarySearch(int arr[],int x){
-
   int l=0,r=n-1;
   while(l<=r){
     int mid = (l+r)/2;
@@ -25,6 +24,5 @@ int main(){
   int result = binarySearch(arr,x);
   if(result==-1)cout<<"element not present"<<endl;
   else cout<<"element is present at index "<<result<<endl;  
-  
 
 }

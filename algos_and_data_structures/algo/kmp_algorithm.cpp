@@ -11,38 +11,37 @@ void computeLPSArray(string pat);
 
 
 void KMPSearch(string pat,string txt){
-    computeLPSArray(pat);
-    int i = 0,j  = 0;
+  computeLPSArray(pat);
+  int i = 0,j  = 0;
 //    for(int x=0;x<M;x++)cout<<lps[x]<<endl;
-    while (i < N){
-      if (pat[j] == txt[i]){ j++;i++; }
-      if (j == M){
-        cout<<"find pattern at index "<<i-j<<endl;
-        j = lps[j-1];
-      } else if (i < N && pat[j] != txt[i]){
-        if (j != 0) j = lps[j-1]; else i = i+1;
-      }
+  while (i < N){
+    if (pat[j] == txt[i]){ j++;i++; }
+    if (j == M){
+      cout<<"find pattern at index "<<i-j<<endl;
+      j = lps[j-1];
+    } else if (i < N && pat[j] != txt[i]){
+      if (j != 0) j = lps[j-1]; else i = i+1;
     }
+  }
 }
  
 void computeLPSArray(string pat){
-    int len = 0;
-    lps[0] = 0;
-    int i = 1;
-    while (i < M){
-        if (pat[i] == pat[len]){ len++;lps[i] = len;i++;}
-        else{
-          if (len != 0) len = lps[len-1];
-          else{ lps[i] = 0;i++;}
-        }
+  int len = 0;
+  lps[0] = 0;
+  int i = 1;
+  while (i < M){
+    if(pat[i] == pat[len]){ len++;lps[i] = len;i++;}
+    else{
+      if (len != 0) len = lps[len-1];
+      else{ lps[i] = 0;i++;}
     }
+  }
 }
  
-int main()
-{
-    string txt = "ABABDABACDABABCABAB";
-    string pat = "ABABCABAB";
-    N= txt.length(),M=pat.length();
-    KMPSearch(pat, txt);
-    return 0;
+int main(){
+  string txt = "ABABDABACDABABCABAB";
+  string pat = "ABABCABAB";
+  N= txt.length(),M=pat.length();
+  KMPSearch(pat, txt);
+  return 0;
 }

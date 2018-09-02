@@ -14,10 +14,7 @@ vi disc(NUM),low(NUM),parent(NUM);
 int timer,n;
 
 
-void add(int x,int y){
-  graph[x].push_back(y);
-  graph[y].push_back(x);
-}
+void add(int x,int y){ graph[x].push_back(y);graph[y].push_back(x); }
 
 void articulation_pt(int u){
   visited[u] = true;
@@ -42,11 +39,9 @@ int main(){
   n = 5;
   add(1,0),add(0,2),add(2,1),add(0,3),add(3,4);
   
-  
   for(int i=0;i<n;i++){ parent[i] = -1;visited[i] = false;ap[i]=false; }
   
-  for(int i=0;i<n;i++)
-    if(visited[i] == false) articulation_pt(i);
+  for(int i=0;i<n;i++) if(visited[i] == false) articulation_pt(i);
     
   cout<<"Articulation points are "<<endl;
   for(int i=0;i<n;i++)if(ap[i])cout<<i<<" ";

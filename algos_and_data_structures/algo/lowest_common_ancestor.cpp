@@ -20,7 +20,6 @@ void dfs(int v,int p=0){
     int to = graph[v][i];
     if(to != p) dfs(to,v);
   }
-
   tout[v] = ++timer;
 }
 

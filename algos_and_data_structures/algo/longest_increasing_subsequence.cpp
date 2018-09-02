@@ -9,7 +9,6 @@ int n;
 vi input,tail;
 
 int ceil_index(int l,int r,int key){
-  
   while(r-l>1){
     int m = (l+r)/2;
     if(tail[m]>=key) r= m; else l=m;
