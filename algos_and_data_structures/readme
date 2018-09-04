@@ -86,6 +86,9 @@ The given expressions are of the form (a1 or a2) and ( b1 or b2) and (c1 or c2) 
 75. sum of divisors(factors) of numbers --------> This has got applications in other problems. Here sum of first 10^5 number is being calculated.
 76. euler tour tree -----------> Based on euler traversal, creates euler tour tree which consist of start and end of every node. Can be used in segment trees and other trees.
 77. number of paths from bottom left to top right -------> can be calculated using formula (m-1+n-1)!/(m-1)!(n-1)!. can be calculated through dp but will take some time. dp[m][n] = dp[m-1][n]+dp[m][n-1]
+78. convex hull( jarvis algorithm or wrapping ) -------->Given a set of points in the plane, the convex hull of the set is the smallest convext polygon that contains all the points of it. Jarvis algorithm start from the leftmost point and keep wrapping points in counter-clockwise direction. Time complexity is O(m*n) where n is number of input points and m is the number of output or hull points. worst case is O(n^2) when m=n.
+79. convex hull( graham scan) --------> runs in O(nlogn) time.
+80. convex hull trick -----------> used to solve O(n^2) dp problems in O(nlogn)time. Not acutally related with convex hull.(not yet checked dynamic variant)
 
 
 Data structure
