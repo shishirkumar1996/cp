@@ -47,7 +47,7 @@ struct segment_tree{
     if(l<=hl && hr<=r){ arr[i].range_update(v);propogate(i); return arr[i];}
     return arr[i] = node(range_update(l,r,v,2*i+1),range_update(l,r,v,2*i+2));}
 
-    void propogate(int i){
+  void propogate(int i){
     if(arr[i].l<arr[i].r) {arr[i].push(arr[2*i+1]); arr[i].push(arr[2*i+2]); }
     arr[i].apply();
   }  
