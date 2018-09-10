@@ -5,3 +5,4 @@
 4. std::endl flushes the internal buffer of c++ runtime  to the operating system on every single line. Therefore we can change endl with '\n" to avoid tle
 5. number which is at minimum sum of manhattan distance from a given array is the median of the array
 6. map stores its elements in increasing order of its key(first value).
+7. priority queue top is the maximum value therefore consider it.
