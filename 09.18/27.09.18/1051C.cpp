@@ -30,7 +30,7 @@ int main(){
       if(process[i].size()>=3){
         flag = i;
         output[process[i][0]] = 'B';
-        for(int j=1;j<=process[i].size();j++)
+        for(int j=1;j<process[i].size();j++)
           output[process[i][j]] = 'A';
       }
       if(flag)break;  
