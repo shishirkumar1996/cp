@@ -12,6 +12,12 @@ using namespace std;
 
 int main(){
 
+  lld n,k;
+  cin>>n>>k;
+  if((n*(n-1))/2<=k){ cout<<"no solution\n";return 0; }
+  
+  for(int i=0;i<n;i++)cout<<0<<" "<<i<<'\n';
+
   #ifdef TM
     cerr<<"Time elapsed: "<<1.0*clock()/CLOCKS_PER_SEC<<" s.\n";
   #endif
