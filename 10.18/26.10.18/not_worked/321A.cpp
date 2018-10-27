@@ -32,7 +32,6 @@ int main(){
   for(int i=0;i<process.size();i++){
     lld rem_x = a-process[i].first;
     lld rem_y = b-process[i].second;
-    
     if(fin_x==0||fin_y==0){
       if(fin_x && !rem_y && rem_x%fin_x==0){ cout<<"Yes\n";return 0;}
       if(fin_y && !rem_x && rem_y%fin_y==0){cout<<"Yes\n";return 0;}
