@@ -32,9 +32,9 @@ void fillOrder(int v){
 }
  
 void printSCCs(){
-  for(int i = 0; i < n; i++)visited[i] = false;
-  for(int i = 0; i < n; i++)if(visited[i] == false)fillOrder(i);
-  for(int i = 0; i < n; i++) visited[i] = false;
+  for(int i=0;i<n;i++)visited[i] = false;
+  for(int i=0;i<n;i++)if(visited[i] == false)fillOrder(i);
+  for(int i=0;i<n;i++) visited[i] = false;
   while (st.size()){
     int v = st.top();
     st.pop();
