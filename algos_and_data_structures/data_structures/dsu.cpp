@@ -16,4 +16,4 @@ class DisjointSet{
   
   bool check(int a,int b){return find(a)==find(b);}
 
-}
+};
