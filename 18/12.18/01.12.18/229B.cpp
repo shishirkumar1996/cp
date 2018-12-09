@@ -47,12 +47,12 @@ int main(){
   for(int i=0;i<=n;i++)dist[i] = MAXM;
   dist[1]  = 0;
   priority_queue< pr > temp;
-  temp.push(make_pair(dist[1],1));
+  temp.push(make_pair(-dist[1],1));
   
   while(temp.size()){
     pr top = temp.top();
     temp.pop();
-    lld d = top.first;
+    lld d = -top.first;
     lld v = top.second;
     if(mp[v][d]) d = mp[v][d];
     for(int i=0;i<graph[v].size();i++){
@@ -60,7 +60,7 @@ int main(){
       lld x = graph[v][i].second;
       if(d+x<dist[child]){
         dist[child] = d+x;
-        temp.push(make_pair(dist[child],child));
+        temp.push(make_pair(-dist[child],child));
       } 
     }
   }
