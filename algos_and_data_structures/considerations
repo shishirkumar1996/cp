@@ -6,3 +6,4 @@
 5. number which is at minimum sum of manhattan distance from a given array is the median of the array
 6. map stores its elements in increasing order of its key(first value).
 7. priority queue top is the maximum value therefore consider it.
+8. we can do constant time erase function in vector therefore it becomes easier to remove elements from a sorted vector
